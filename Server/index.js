@@ -16,7 +16,9 @@ app.use('/api/v1/post', postRoutes);
 app.use('/api/v1/ai', aiRoutes);
 
 app.get('/', async (req, res) => {
- res.send('Hello from AI Image Generator');
+  res.status(200).json({
+    message: 'Hello from AI Image Generator',
+  });
 });
 
 const startServer = async () => {
